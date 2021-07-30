@@ -6,7 +6,7 @@ const passport = require('passport')
 var logger = require('morgan');
 var mongoose = require('mongoose')
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+var MongoStore = require('connect-mongo').default;
 var flash = require('connect-flash'); 
 require('dotenv').config()
 const dotenv=require('dotenv');
@@ -38,7 +38,7 @@ app.use(
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    store: MongoStore.create({ mongoUrl: 'mongodb://localhost/github-login' }),
   })
 );
 
