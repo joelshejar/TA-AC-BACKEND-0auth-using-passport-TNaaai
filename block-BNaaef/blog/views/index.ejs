@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+  </head>
+  <body class="home-index">
+    <header>
+      <div class="container">
+        <a href="/">Home</a>
+        <ul>
+          <li>
+            <a href="/article"> List Of Article </a>
+          </li>
+          <%if(user){%>
+          <li>
+            <a href="/article/new"> Add Article </a>
+          </li>
+          <li><a href="/users/logout">logout</a></li>
+          <%}else{ %>
+          <li>
+            <a href="/users/signup"> Signup </a>
+          </li>
+          <li>
+            <a href="/users/login"> Login </a>
+          </li>
+          <%}%>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1>Welcome to Node.js</h1>
+      <p>Express assignment</p>
+    </main>
+  </body>
+</html>
