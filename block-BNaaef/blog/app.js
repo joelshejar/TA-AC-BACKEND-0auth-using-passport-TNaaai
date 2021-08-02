@@ -88,3 +88,7 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
+// npm i passport-google-oauth2
+// npm install node-sass-middleware
+// npm i passport passport-github passport-google-oauth20
+// npm i connect-mongo mongoose express-session bcrypt connect-flash dotenv --save
